@@ -1,9 +1,9 @@
-CLib.Util.LoadServerScript(script)
+CLib.Util.LoadServerScript = function(script)
     if CLIENT then return end
     return include(script)
 end
 
-CLib.Util.LoadClientScript(script)
+CLib.Util.LoadClientScript = function(script)
     if SERVER then
         AddCSLuaFile(script)
         return
@@ -11,7 +11,7 @@ CLib.Util.LoadClientScript(script)
     return include(script)
 end
 
-CLib.Util.LoadSharedScript(script)
+CLib.Util.LoadSharedScript = function(script)
     if SERVER then AddCSLuaFile(script) end
     return include(script)
 end

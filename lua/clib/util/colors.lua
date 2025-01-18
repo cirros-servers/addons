@@ -1,4 +1,4 @@
-CLib.Util.GetTeamColor(steamid) 
+CLib.Util.GetTeamColor = function(steamid) 
     local groupName = "user"
     local _, data = pcall(function() return ULib.ucl.getUserInfoFromID(steamid) end)
     if data and data.group then
@@ -15,6 +15,6 @@ CLib.Util.GetTeamColor(steamid)
     return color
 end
 
-CLib.Util.ToHex(color)
+CLib.Util.ToHex = function(color)
     return string.format("%x%x%x", color.r, color.g, color.b)
 end
