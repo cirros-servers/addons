@@ -1,6 +1,3 @@
-util.AddNetworkString("BuildMode_MSG")
-util.AddNetworkString("BuildMode_Err")
-
 hook.Add("PlayerInitialSpawn", "BuildMode_PlayerInitialSpawn", function(ply)
   ply.build = {}
   ply.build.active = false

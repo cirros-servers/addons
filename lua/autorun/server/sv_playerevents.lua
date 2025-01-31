@@ -21,7 +21,7 @@ hook.Add("player_activate", "CLIB_PLAYER_ACTIVATE_ADVERT", function(data)
 end)
 
 gameevent.Listen("player_disconnect")
-hook.Add( "player_disconnect", "CLIB_PLAYER_DISCONNECT_ADVERT", function( data )
+hook.Add("player_disconnect", "CLIB_PLAYER_DISCONNECT_ADVERT", function( data )
     if data.bot == 1 then return end
 	local name = data.name
     local steamid = data.networkid

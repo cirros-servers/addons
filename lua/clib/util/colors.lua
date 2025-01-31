@@ -1,5 +1,5 @@
 CLib.Util.GetTeamColor = function(steamid) 
-    local groupName = "user"
+    local groupName = "User"
     local _, data = pcall(function() return ULib.ucl.getUserInfoFromID(steamid) end)
     if data and data.group then
         groupName = data.group

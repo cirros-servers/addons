@@ -1,6 +1,8 @@
 local Matcher = "%[&#%x+%]"
 local Extractor = "%[&#(%x+)%]"
 
+-- wtf is this? why did i write this? this is actually fucking horrible
+-- todo make this not stupid asf
 CLib.Strings.ParseColored = function (str)
     local matches = {}
     local matchesIt = string.gmatch(str, Matcher)
